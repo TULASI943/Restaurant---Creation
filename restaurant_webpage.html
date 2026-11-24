@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spice Garden | Restaurant</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; color: #29231f; line-height: 1.6; background: #fffaf4; }
+    header { background: #241812; color: white; padding: 18px 8%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+    .logo { font-size: 1.6rem; font-weight: 800; color: #ffbd69; letter-spacing: 1px; }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: #ffbd69; }
+    .hero { min-height: 490px; padding: 90px 8%; display: flex; align-items: center; color: white; background: linear-gradient(90deg, rgba(20,12,8,.88), rgba(20,12,8,.25)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=85') center/cover; }
+    .hero-content { max-width: 600px; }
+    .eyebrow { color: #ffc078; text-transform: uppercase; letter-spacing: 3px; font-weight: bold; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); line-height: 1.08; margin: 14px 0 20px; }
+    .hero p { font-size: 1.1rem; max-width: 510px; margin-bottom: 28px; }
+    .btn { display: inline-block; background: #e8752e; color: white; padding: 13px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: .2s; }
+    .btn:hover { background: #c95d1d; transform: translateY(-2px); }
+    section { padding: 70px 8%; }
+    .section-heading { text-align: center; margin-bottom: 38px; }
+    .section-heading span { color: #d86c2b; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; font-size: .85rem; }
+    .section-heading h2 { font-size: 2.3rem; margin-top: 6px; }
+    .menu-grid, .offer-grid, .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+    .food-card, .offer-card, .review-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(48,29,16,.08); }
+    .food-card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+    .food-info { padding: 18px; }
+    .food-info h3 { display: flex; justify-content: space-between; gap: 10px; font-size: 1.08rem; }
+    .price { color: #d86c2b; white-space: nowrap; }
+    .food-info p { color: #746b64; font-size: .93rem; margin-top: 8px; }
+    .offers { background: #f5e8d9; }
+    .offer-card { padding: 28px; text-align: center; border: 1px solid #f0d5bd; }
+    .offer-icon { font-size: 2.3rem; }
+    .offer-card h3 { margin: 10px 0; color: #9d481e; }
+    .offer-card p { color: #6f6258; }
+    .reviews { background: #fffaf4; }
+    .review-card { padding: 25px; }
+    .stars { color: #e69a25; letter-spacing: 3px; }
+    .review-card p { margin: 12px 0; color: #625951; }
+    .review-card strong { color: #9d481e; }
+    .contact { background: #241812; color: white; }
+    .contact .section-heading h2 { color: white; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+    .contact-item h3 { color: #ffbd69; margin-bottom: 8px; }
+    .contact-item a { color: #ffcf9b; }
+    footer { text-align: center; background: #160f0b; color: #cfc2b8; padding: 18px; font-size: .9rem; }
+    @media (max-width: 600px) {
+      header { justify-content: center; text-align: center; }
+      nav { justify-content: center; gap: 13px; }
+      .hero { min-height: 430px; padding-top: 65px; padding-bottom: 65px; }
+      section { padding: 55px 6%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SPICE GARDEN</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#offers">Offers</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Fresh • Flavorful • Made with love</div>
+        <h1>A little spice, a lot of happiness.</h1>
+        <p>Discover delicious meals, fresh ingredients, and warm hospitality at Spice Garden. Your table is waiting!</p>
+        <a class="btn" href="#menu">Explore Our Menu</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section-heading">
+        <span>From our kitchen</span>
+        <h2>Popular Food Menu</h2>
+      </div>
+      <div class="menu-grid">
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Chicken biryani">
+          <div class="food-info"><h3>Chicken Biryani <span class="price">₹249</span></h3><p>Aromatic basmati rice with tender chicken and our special spices.</p></div>
+        </article>
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Fresh pizza">
+          <div class="food-info"><h3>Garden Pizza <span class="price">₹299</span></h3><p>Loaded with fresh vegetables, cheese, and a crisp golden crust.</p></div>
+        </article>
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Paneer curry">
+          <div class="food-info"><h3>Paneer Butter Masala <span class="price">₹219</span></h3><p>Soft paneer cubes in a rich, creamy tomato gravy.</p></div>
+        </article>
+        <article class="food-card">
+          <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="Noodles">
+          <div class="food-info"><h3>Veg Hakka Noodles <span class="price">₹179</span></h3><p>Wok-tossed noodles with crunchy vegetables and savory sauce.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="offers" id="offers">
+      <div class="section-heading"><span>Good food, great value</span><h2>Special Offers</h2></div>
+      <div class="offer-grid">
+        <article class="offer-card"><div class="offer-icon">🍽️</div><h3>Lunch Combo</h3><p>Get a biryani, drink, and dessert combo for just ₹299.</p></article>
+        <article class="offer-card"><div class="offer-icon">👨‍👩‍👧‍👦</div><h3>Family Feast</h3><p>Enjoy 15% off on orders above ₹999. Perfect for sharing!</p></article>
+        <article class="offer-card"><div class="offer-icon">🎉</div><h3>Weekend Treat</h3><p>Buy 2 pizzas and get a complimentary garlic bread.</p></article>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="section-heading"><span>Kind words</span><h2>What Our Customers Say</h2></div>
+      <div class="review-grid">
+        <article class="review-card"><div class="stars">★★★★★</div><p>“The biryani was full of flavor and the service was excellent. Will visit again!”</p><strong>— Ananya</strong></article>
+        <article class="review-card"><div class="stars">★★★★★</div><p>“A lovely place for dinner with friends. Great food and a comfortable atmosphere.”</p><strong>— Rahul</strong></article>
+        <article class="review-card"><div class="stars">★★★★☆</div><p>“Loved the paneer curry and the special offers. Really good value for money.”</p><strong>— Sneha</strong></article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-heading"><span>Come say hello</span><h2>Contact & Location</h2></div>
+      <div class="contact-grid">
+        <div class="contact-item"><h3>📍 Visit Us</h3><p>MG Road, Vijayawada,<br>Andhra Pradesh, India</p></div>
+        <div class="contact-item"><h3>📞 Call Us</h3><p>+91 98765 43210</p></div>
+        <div class="contact-item"><h3>✉️ Email</h3><p><a href="mailto:hello@spicegarden.example">hello@spicegarden.example</a></p></div>
+        <div class="contact-item"><h3>🕒 Opening Hours</h3><p>Monday – Sunday<br>11:00 AM – 10:30 PM</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Spice Garden Restaurant. Made with love and flavor.</footer>
+</body>
+</html>
